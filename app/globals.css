@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --bg-base: #0e0e10;
+  --bg-surface: #141416;
+  --bg-elevated: #1c1c1f;
+  --bg-hover: #222226;
+  --border: #2a2a2e;
+  --border-subtle: #1f1f23;
+  --text-primary: #f0f0f0;
+  --text-secondary: #8a8a90;
+  --text-tertiary: #5a5a62;
+  --accent: #7c6dfa;
+  --accent-dim: rgba(124,109,250,0.12);
+  --accent-glow: rgba(124,109,250,0.25);
+  --green: #1DB877;
+  --yellow: #E5A040;
+  --orange: #E07040;
+  --red: #D94F4F;
+  --green-dim: rgba(29,184,119,0.1);
+  --yellow-dim: rgba(229,160,64,0.1);
+  --orange-dim: rgba(224,112,64,0.1);
+  --red-dim: rgba(217,79,79,0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--border);
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: 2px solid var(--bg-base);
+  box-shadow: 0 0 0 2px var(--accent-glow);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: 2px solid var(--bg-base);
+}
+
+.mono { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; }
